@@ -1,3 +1,10 @@
 node_modules/
 dist/
 dist.zip
+
+# Ignore all .md files except README.md
+*.md
+!README.md
+
+# Ignore PDF files
+*.pdf
