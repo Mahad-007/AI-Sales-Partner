@@ -1,50 +1,77 @@
-# FreelanceFlow - AI-Powered Upwork Assistant
+# AI Sales Partner for Freelancers
 
-A Chrome extension that supercharges your Upwork freelancing workflow with AI. FreelanceFlow lives in your browser's side panel and automatically detects what page you're on -- whether it's a job listing, a client chat, or your profile -- then provides contextual AI-powered tools to help you win more projects.
+An AI-powered Chrome extension that acts as your intelligent sales copilot throughout the complete freelance deal lifecycle -- from identifying opportunities to closing deals and maintaining long-term client relationships.
 
-## Features
+The AI Sales Partner behaves like a **20-year experienced freelancer**, helping you craft better proposals, prepare for client meetings, analyze clients, and continuously improve your sales strategy. It integrates freelancer profiles, client history, proposal data, and sales insights to ensure every proposal and interaction is aligned with your positioning, skills, and past work.
 
-### Job Hunter
-- **Smart Job Scoring** -- Automatically scores jobs 0-100 based on how well they match your skills, rate, and experience
-- **Sort by Fit** -- Reorder job listings by match score to focus on the best opportunities first
-- **Auto-Score** -- Optionally score jobs automatically as soon as a search page loads
-- Displays budget, job type, experience level, client country, rating, and proposal count for each listing
+Built as a Chrome side panel that lives in your browser, it automatically detects what Upwork page you're on and provides contextual AI-powered tools.
 
-### Proposal Generator
+## Objectives
+
+- Improve proposal quality and personalization
+- Increase freelance deal conversion rates
+- Maintain a centralized knowledge base of clients, deals, and strategies
+- Reduce time spent writing proposals and preparing meetings
+- Align proposals with freelancer profiles, experience, and positioning
+- Achieve a 25-35% increase in sales performance over time
+
+## Key Features
+
+### 1. Freelancer Profile Synchronization
+
+Maintains structured information about freelancers including skills, portfolio projects, past clients, positioning, and platform profiles. Ensures proposals and communication are always aligned with your real profile and capabilities.
+
+- **GitHub Integration** -- Fetches your GitHub profile, repos (sorted by stars), languages, and README content
+- **Website Scraping** -- Extracts text from your portfolio website
+- **AI Profile Suggestions** -- Generates optimized Upwork titles, bio, skills (with proficiency levels), and rate recommendations
+- **Completeness Assessment** -- Scores your portfolio data with strengths, gaps, and recommendations
+
+### 2. Proposal Writing Assistant (V1 Priority)
+
+Generates full freelance proposals based on job descriptions, client profile analysis, freelancer portfolio, and project requirements. Requests missing context when needed to ensure higher-quality applications.
+
 - **AI-Generated Cover Letters** -- Creates personalized, Upwork-optimized proposals tailored to each job posting
-- **Portfolio-Aware** -- Automatically references your GitHub projects and portfolio highlights in proposals
+- **Portfolio-Aware** -- Automatically references your GitHub projects and portfolio highlights
 - **Edit & Copy** -- Inline editing with one-click copy to clipboard
 - Follows Upwork best practices: hook opening, specific experience, proposed approach, and call to action
 
-### Profile Scanner
-- **Profile Analysis** -- Scrapes any Upwork profile page and scores it across Title, Bio, Skills, Portfolio, Rate, and Completeness
-- **Actionable Suggestions** -- Section-by-section improvement recommendations backed by scores
-- **Completeness Tracking** -- Visual progress bar showing profile completeness percentage
+### 3. Client Research & Context Analysis
 
-### Profile Improver
-- **Job-Targeted Optimization** -- Compares your profile against a specific job posting and suggests targeted improvements
-- **Keyword & Skill Gaps** -- Identifies missing keywords and skills to add
-- **Bio & Portfolio Tips** -- Specific edits to make your profile more competitive for the job
+Analyzes client hiring history, budget patterns, project goals, and industry context for better proposal positioning and strategic responses.
 
-### Chat Assistant
-- **Smart Reply Suggestions** -- Generates 3 reply options in different tones: Brief, Detailed, and Friendly
-- **Conversation-Aware** -- Reads the last messages in the thread to generate contextually relevant replies
-- **One-Click Copy** -- Copy any suggestion directly to your clipboard
+- **Smart Job Scoring** -- Automatically scores jobs 0-100 based on how well they match your skills, rate, and experience
+- **Sort by Fit** -- Reorder job listings by match score to focus on the best opportunities first
+- **Auto-Score** -- Optionally score jobs automatically as soon as a search page loads
+- Displays budget, job type, experience level, client country, rating, and proposal count
 
-### Meeting Prep
+### 4. Meeting Preparation Assistant
+
+Before client meetings, generates client briefing reports, meeting strategies, recommended questions, potential objections with responses, and deal-closing suggestions.
+
 - **Talking Points** -- AI-generated checklist of key points to cover in client calls
 - **Likely Questions** -- Predicts what the client will ask based on the job and conversation history
 - **Preparation Tips** -- Actionable advice to make a great impression
 - **Manual Context** -- Add context manually if no active conversation is detected
 
-### Portfolio Builder
-- **GitHub Integration** -- Fetches your GitHub profile, repos (sorted by stars), languages, and README content
-- **Website Scraping** -- Extracts text from your portfolio website
-- **AI Profile Suggestions** -- Generates optimized Upwork titles, bio, skills (with proficiency levels), and rate recommendations
-- **One-Click Apply** -- Apply any suggestion directly to your stored profile
-- **Completeness Assessment** -- Scores your portfolio data with strengths, gaps, and recommendations
+### 5. Profile Analysis & Improvement
+
+Scans and scores freelancer profiles, then provides job-targeted optimization recommendations.
+
+- **Profile Scanner** -- Scores your profile across Title, Bio, Skills, Portfolio, Rate, and Completeness
+- **Actionable Suggestions** -- Section-by-section improvement recommendations
+- **Job-Targeted Optimization** -- Compares your profile against a specific job posting and suggests targeted improvements
+- **Keyword & Skill Gaps** -- Identifies missing keywords and skills to add
+
+### 6. Chat Assistant & Smart Replies
+
+Reads conversation threads and generates contextually relevant replies in multiple tones.
+
+- **Smart Reply Suggestions** -- Generates 3 reply options: Brief, Detailed, and Friendly
+- **Conversation-Aware** -- Reads the last messages in the thread for context
+- **One-Click Copy** -- Copy any suggestion directly to your clipboard
 
 ### Settings
+
 - **Multi-Model Support** -- Choose from Claude Opus 4.6, Sonnet 4.6/4.5, Haiku 4.5, GPT-4o, GPT-4o Mini, or Gemini 2.0 Flash
 - **API Key Validation** -- Test your OpenRouter key before saving
 - **Auto-Score Toggle** -- Enable/disable automatic job scoring on page load
@@ -135,8 +162,8 @@ All communication uses Chrome's `runtime.sendMessage` with a typed union:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Mahad-007/FreelanceFlow-Chrome-Extensiom.git
-cd FreelanceFlow-Chrome-Extensiom
+git clone https://github.com/Mahad-007/AI-Sales-Partner.git
+cd AI-Sales-Partner
 
 # Install dependencies
 npm install
@@ -151,7 +178,7 @@ npm run build
 2. Enable **Developer mode** (toggle in top-right)
 3. Click **Load unpacked**
 4. Select the `dist/` folder
-5. Pin the FreelanceFlow extension and click it to open the side panel
+5. Pin the AI Sales Partner extension and click it to open the side panel
 6. Enter your OpenRouter API key in Settings
 
 ### Development
@@ -161,7 +188,7 @@ npm run build
 npm run dev
 ```
 
-After rebuilding, go to `chrome://extensions/` and click the refresh icon on the FreelanceFlow card.
+After rebuilding, go to `chrome://extensions/` and click the refresh icon on the extension card.
 
 ## Configuration
 
@@ -184,6 +211,14 @@ The extension enforces a client-side rate limit of **10 requests per 60 seconds*
 | Job Search | `/nx/search/jobs`, `/ab/jobs/search` | Job Hunter (scoring + sorting) |
 | Job Detail | `/jobs/~...`, `/nx/proposals/job/~...` | Proposal Generator, Profile Improver |
 | Messages | `/ab/messages`, `/nx/messages` | Chat Assistant, Meeting Prep |
+
+## Long-Term Vision
+
+Over time, the AI Sales Partner may evolve into:
+
+- An **AI Sales Operating System for Freelancers**
+- An **open-source freelancer sales assistant**
+- A **SaaS product for freelancers and agencies**
 
 ## License
 
